@@ -4,7 +4,7 @@
 *::after,
 *::before {
   margin: 0;
-  padding: 0;
+  padding: 8px;
   box-sizing: border-box;
 }
 
@@ -17,7 +17,7 @@
 } */
 
 body {
-    background-color: #945252;
+    background-color: #65d6ba;
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     color: var(--light-color);

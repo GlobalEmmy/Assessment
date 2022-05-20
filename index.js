@@ -1,3 +1,4 @@
+
 const addNewRoom = () => {
     const room = {
       name: form.name.value,
@@ -24,8 +25,8 @@ const bookRoom = (booked, id) => {
   const getBookedRoom = localStorage.getItem('booked-room');
 
     if (getBookedRoom) {
-     bookedRoom = JSON.parse(localStorage.getItem('booked-room'));
-      if(bookedRoom.includes(id)) {
+     bookedRooms = JSON.parse(localStorage.getItem('booked-room'));
+      if(bookedRooms.includes(id)) {
         alert('Seems like you have already booked this room') 
       } 
       else {
@@ -38,18 +39,14 @@ const bookRoom = (booked, id) => {
 };
 
 const saveBooking = (booked, id) => {
-    bookedRoom.push(id);
-    localStorage.setItem('booked-room', JSON.stringify(bookedRoom));
+    bookedRooms.push(id);
+    localStorage.setItem('booked-room', JSON.stringify(bookedRooms));
 
     const data = { booked: booked +1 }
     db.collection('room').doc(id).update(data)
     .then(() => alert('Room successfully booked'))
     .catch(err => console.log(err))
 }
-
-
-
-
 
 const roomContainer = document.querySelector('.room-container')
 const nav = document.querySelector('nav')
