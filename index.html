@@ -8,7 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="see">testing</h1>
+    <header id="home">
+        <nav class="navbar">
+          <h1>Welcome to Web3Bridge</h1>
+          <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#events">Room</a></li>
+              <li><a href="#add-event">New Event</a></li>
+          </ul>
+        </nav>
+        <div class="welcome-event"></div>
+      </header>
+      <main>
+          <section id="events">
+              <!-- <h1 class="section-title">Events</h1> -->
+              <div class="events-container"></div>
+          </section>
+          <section id="add-event">
+              <!-- <h1 class="section-title">New Event</h1> -->
+              <form class="form">
+                  <input type="text" id="name" placeholder="Name">
+                  <input type="number" id="attendee" placeholder="Occupants">
+                  <textarea id="description" cols="30" rows="10" placeholder="Description..."></textarea>
+                  <select id="status">
+                      <option value="0">Free</option>
+                      <option value="1">Booked</option>
+                  </select>
+                  <button class="btn btn-primary">Save</button>
+              </form>
+          </section>
+      </main>
     <script src="index.js"></script>
 </body>
 </html>
